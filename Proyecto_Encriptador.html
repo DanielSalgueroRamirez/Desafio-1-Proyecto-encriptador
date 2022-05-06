@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="logo "><img src="Logo.png"></h1>
+  </header>
+
+  <h2 class="titulo">código secreto</h2>
+
+  <main class="main">
+    <section class="form box">
+      <form action="">
+        <label for="input-texto">Solo letras minúsculas, sin acento</label>
+        <textarea class="text-input" type="text" name="input-texto" id="input-texto"
+          placeholder="Ingrese el texto"></textarea>
+        <input class="btn" type="button" value="encriptar!" id="btn-encriptar">
+        <input class="btn" type="button" value="desencriptar!" id="btn-desencriptar">
+      </form>
+    </section>
+
+    <section class="msg box">
+      <h3 id="">Mensaje:</h3>
+      <textarea class="text-input2" type="text" id="msg" placeholder="Ningún mensaje encontrado"></textarea>
+      <input class="btn" type="submit" value="copiar" id="btn-copy" onclick="copiar();">
+    </section>
+  </main>
+
+  <footer>
+    <img src="Logo.png">
+    <p class="copyright">&copy Copyright Alura - 2022</p>
+  </footer>
+
+  <script>
+
+    function desencriptar() {
+      var mensaje = document.getElementById("input-texto").value;
+      var nuevoMensaje = mensaje.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
+      document.getElementById("msg").value = nuevoMensaje;
+    }
+
+    function encriptar() {
+      var mensaje1 = document.getElementById("input-texto").value;
+      var nuevoMensaje1 = mensaje1.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/a/g, 'ai').replace(/o/g, "ober").replace(/u/g, 'ufat');
+      document.getElementById("msg").value = nuevoMensaje1;
+    }
+
+    var button = document.getElementById("btn-desencriptar")
+    button.onclick = desencriptar;
+
+    var button = document.getElementById("btn-encriptar")
+    button.onclick = encriptar;
+
+    //copiar
+    function copiar() {
+      var content = document.getElementById('msg');
+
+      content.select();//Selecciono todo el texto
+      document.execCommand('copy');
+
+      setTimeout(alert("Texto copiado!"), 1000);
+
+    }
+  </script>
+</body>
+
+</html>

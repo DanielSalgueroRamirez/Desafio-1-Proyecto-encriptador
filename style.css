@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: rgba(129, 160, 218, 0.658);
+}
+
+.logo{
+  padding: 1vw;
+}
+
+body {
+  background: url(fondo-de-pantalla-azul-oscuro.jpg);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.main {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 27px ;
+}
+
+.titulo {
+  color: #FFFFFF;
+  padding: 15px;
+  width: 30vw;
+  margin: auto;
+  text-align: left;
+  font-size: 40px;
+}
+
+.box {
+  padding: 10px;
+  margin: 0 10px 0 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 0.5em;
+  width: 50vw;
+  height: 25vw;
+}
+
+.btn {
+  border: 0;
+  color: white;
+  font-weight: bold;
+  background-color: darkblue;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 0.5em;
+  font-size: medium;
+
+  border-color: #3498db;
+  box-shadow: 0 0 40px 40px #22628d inset, 0 0 0 0 darkblue;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.btn:hover{
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  font-size: 17px;
+}
+
+.btn:active{
+  background-color: #4c7692;
+}
+
+.text-input, .text-input2 {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 0.5em;
+  width: 100%;
+  height: 350px;
+  font-size: 22px;
+}
+
+.msg{
+  font-size: 23px;  
+}
+
+footer{ /*Pie de página*/
+  text-align: center;
+  background-color: rgba(129, 160, 218, 0.658);
+  padding: 1vw;
+  margin: 172px 0px 0px 0px;
+}
+
+.copyright{
+  color: black;
+  font-size: 13px;
+}
+
+.text-input2::placeholder{
+  background: url(Muneco.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+
